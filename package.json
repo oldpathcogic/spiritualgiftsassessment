@@ -8,6 +8,7 @@
     "dev:server": "node --watch server/index.js",
     "dev:client": "vite",
     "build": "vite build",
+    "build:pages": "vite build --outDir docs",
     "preview": "vite preview",
     "start": "node server/index.js"
   },

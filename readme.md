@@ -50,6 +50,25 @@ Endpoints:
 - Admin viewer: `http://localhost:5173/admin`
 - Backend API: `http://localhost:8787`
 
+## GitHub Pages publish (current repo setup)
+
+Your repo is currently configured to publish from `main` branch `/docs`.
+
+Before pushing to GitHub Pages:
+
+```bash
+npm run build:pages
+cp docs/index.html docs/404.html
+touch docs/.nojekyll
+```
+
+Then commit and push the generated `docs/` folder.
+
+Important:
+- This deploys the frontend only (static files).
+- The `/api` backend and Google Sheets server code do not run on GitHub Pages.
+- For live form submissions, host the backend separately (Render, Railway, Fly.io, etc.) and point frontend API calls to that backend URL.
+
 ## 4. Verify submission flow
 
 1. Open `http://localhost:5173`
